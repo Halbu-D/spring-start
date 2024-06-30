@@ -22,7 +22,7 @@ public class HelloController {
     }
 
     @GetMapping("hello-string")
-    @ResponseBody
+    @ResponseBody // http 프로토콜 바디에 아래 리턴값을 그대로 전달
     public String helloString(@RequestParam("name") String name){
         return "hello " + name; // 그냥 바로 출력함
     }
