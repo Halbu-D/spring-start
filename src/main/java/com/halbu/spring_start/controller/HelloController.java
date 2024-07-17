@@ -16,7 +16,7 @@ public class HelloController {
     }
 
     @GetMapping("hello-mvc")
-    public String helloMvc(@RequestParam("name") String name, Model model){
+    public String helloMvc(@RequestParam("name") String name, Model model){ //외부에서 매개변수를 받아야함. -> url에 get방식으로 파라미터를 전달해야 함.
         model.addAttribute("name", name);
         return "hello-template";
     }
@@ -28,7 +28,7 @@ public class HelloController {
     }
 
     @GetMapping("hello-api")
-    @ResponseBody
+    @ResponseBody // viewResolver 대신 HttpMessageConverter가 동작함.
     public Hello helloApi(@RequestParam("name") String name){
         Hello hello = new Hello();
         hello.setName(name);
