@@ -5,11 +5,13 @@ import com.halbu.spring_start.repository.MemberRepository;
 import com.halbu.spring_start.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 //@Service // 순수 자바 코드는 스프링이 관리해야 하는지 알 수 없음
+@Transactional // 데이터를 저장하거나 변경할때 필요
 public class MemberService {
     private final MemberRepository memberRepository;
 
