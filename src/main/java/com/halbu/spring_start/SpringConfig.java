@@ -1,5 +1,6 @@
 package com.halbu.spring_start;
 
+import com.halbu.spring_start.aop.TimeTraceApp;
 import com.halbu.spring_start.repository.*;
 import com.halbu.spring_start.service.MemberService;
 import jakarta.persistence.EntityManager;
